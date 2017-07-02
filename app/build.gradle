@@ -1,8 +1,8 @@
 apply plugin: 'application'
-apply plugin: 'groovy'
+apply plugin: 'java'
 
 version = '1.0'
-mainClassName='Test'
+mainClassName='com.pansijing.douban.Main'
 
 jar {
     manifest {
@@ -12,15 +12,7 @@ jar {
 }
 
 dependencies {
-    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
-    testCompile 'junit:junit:4.12'
 
-    compile 'org.codehaus.groovy:groovy-all:2.4.6'
 	compile project(':common')
 }
 
-task uberjar(type: Jar,dependsOn:[':compileJava',':compileGroovy']) {
-    from files(sourceSets.main.output.classesDir)
-    from configurations.runtime.asFileTree.files.collect { zipTree(it) }
-
-}

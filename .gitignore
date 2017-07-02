@@ -5,6 +5,7 @@
 
 .idea/
 .gradle
+local.properties
 build/
 gradle/
 gradlew*
