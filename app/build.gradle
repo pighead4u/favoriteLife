@@ -1,18 +1,30 @@
-apply plugin: 'application'
-apply plugin: 'java'
+apply plugin: 'com.android.application'
 
-version = '1.0'
-mainClassName='com.pansijing.douban.Main'
+android {
+  compileSdkVersion 25
+  buildToolsVersion "25.0.2"
 
-sourceCompatibility 1.8
-targetCompatibility 1.8
+  defaultConfig {
+    applicationId "com.pansijing.douban"
+    minSdkVersion 20
+    targetSdkVersion 25
+    versionCode 1
+    versionName "1.0"
+    multiDexEnabled true
+  }
 
-jar {
-    manifest {
-        attributes 'Title': 'test', 'Version': version
-        attributes 'Main-Class': mainClassName
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
+  }
+
+  dataBinding {
+    enabled = true
+  }
 }
+
 
 dependencies {
 
