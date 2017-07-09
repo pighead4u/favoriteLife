@@ -1,7 +1,7 @@
 package com.pansijing.douban.movies;
 
-import com.pansijing.common.Test;
 import io.reactivex.Observable;
+import java.util.List;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
@@ -14,6 +14,6 @@ import retrofit2.http.Query;
 
 public interface DouBanMovies {
 
-  @GET("/v2/movie/top250") Observable<Test> getTop250(@Query("start") int start,
-      @Query("count") int count);
+  @GET("/v2/movie/top250") Observable<DouBanResponse<List<MovieEntity>>> getTop250(
+      @Query("start") int start, @Query("count") int count);
 }
