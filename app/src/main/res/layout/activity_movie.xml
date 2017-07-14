@@ -6,6 +6,7 @@
     tools:context="com.pansijing.douban.movies.MovieActivity">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/movie_contents"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

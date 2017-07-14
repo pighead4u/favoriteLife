@@ -34,6 +34,8 @@ dependencies {
     compile 'com.airbnb.android:lottie:2.1.0'
     compile 'com.jakewharton:butterknife:8.7.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+
+    compile 'com.facebook.fresco:fresco:0.14.1'
 }
 
 
