@@ -13,28 +13,28 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public final class DouBanRetrofit {
 
-  static Retrofit instance;
+    static Retrofit instance;
 
-  private static Retrofit createRetrofit() {
-    Retrofit commonRetrofit =
-        new Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .baseUrl("http://api.douban.com")
-            .build();
+    private static Retrofit createRetrofit() {
+        Retrofit commonRetrofit =
+                new Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
+                        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                        .baseUrl("http://api.douban.com")
+                        .build();
 
-    return commonRetrofit;
-  }
-
-  public static Retrofit getInstance() {
-    if (instance == null) {
-      synchronized (DouBanRetrofit.class) {
-        if (instance == null) {
-          instance = createRetrofit();
-        }
-      }
+        return commonRetrofit;
     }
 
-    return instance;
+    public static Retrofit getInstance() {
+        if (instance == null) {
+            synchronized (DouBanRetrofit.class) {
+                if (instance == null) {
+                    instance = createRetrofit();
+                }
+            }
+        }
 
-  }
+        return instance;
+
+    }
 }

@@ -11,7 +11,8 @@ import android.app.Application;
 
 public class DouBanAppliction extends Application {
 
-  @Override public void onCreate() {
-    super.onCreate();
-  }
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
 }

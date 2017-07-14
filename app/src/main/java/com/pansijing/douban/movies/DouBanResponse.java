@@ -8,25 +8,26 @@ package com.pansijing.douban.movies;
  */
 
 public class DouBanResponse<T> {
-  public int count;
-  public int start;
-  public int total;
-  public T subjects;
-  public String title;
+    public int count;
+    public int start;
+    public int total;
+    public T subjects;
+    public String title;
 
-  @Override public String toString() {
-    return "DouBanResponse{"
-        + "count="
-        + count
-        + ", start="
-        + start
-        + ", total="
-        + total
-        + ", subjects="
-        + subjects
-        + ", title='"
-        + title
-        + '\''
-        + '}';
-  }
+    @Override
+    public String toString() {
+        return "DouBanResponse{"
+                + "count="
+                + count
+                + ", start="
+                + start
+                + ", total="
+                + total
+                + ", subjects="
+                + subjects
+                + ", title='"
+                + title
+                + '\''
+                + '}';
+    }
 }
